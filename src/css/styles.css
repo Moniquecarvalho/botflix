@@ -5,12 +5,13 @@ body {
 }
 
 .container {
+  width: 100%;
   max-width: 1200px;
   min-height: 100vh;
   margin: 0 auto;
 }
 
-.container .main-content {
+.main-content {
   width: 100%;
   min-height: 100vh;
   padding: 16px;
@@ -35,14 +36,15 @@ body {
 }
 
 .robot-image {
-  width: 100px;
-  height: 100px;
+  width: 128px;
+  height: 128px;
   border-radius: 50%;
   object-fit: cover;
+  box-shadow: 0 0 40px hsla(348, 83%, 47%, 0.4);
   animation: float 3s ease-in-out infinite;
 }
 
-.container-logo .brand-title {
+.brand-title {
   margin-bottom: 16px;
   color: #f20612;
   font-size: 48px;
@@ -64,31 +66,36 @@ body {
   border-radius: 16px;
 }
 
-.serch-content {
+.search-content {
   gap: 24px;
   display: flex;
   flex-direction: column;
 }
 
-.mood-textarea {
+.input-container {
+  position: relative;
+}
+
+.mood-input {
   width: 100%;
   padding: 16px 64px 16px 16px;
-  background-color: rgba(255, 255, 255, 0.05);
-  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
   font-size: 16px;
+  font-family: inherit;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 8px;
   transition: all 0.2s ease;
 }
 
-.mood-textarea:focus {
-  outline: none;
+.mood-input:focus {
   border-color: #e50914;
+  outline: none;
   box-shadow: 0 0 0 3px rgba(229, 9, 20, 0.1);
 }
 
 .examples {
-  color: #d0d0d0d0;
+  color: #d0d0d0;
   font-size: 14px;
   text-align: left;
 }
@@ -118,7 +125,6 @@ body {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  margin: 20px 0;
   display: flex;
   align-items: center;
   justify-content: center;
