@@ -17,12 +17,25 @@ function setupEventListeners() {
     searchButton.addEventListener('click', handleSearch);
 }
 
-function handleSearch() {
+async function  handleSearch() {
     const mood = moodTextArea.value.trim();
     
     if (!mood) {
         alert('Preencha o campo de humor!');
         return;
     }
+
+    const response = await fetch('https://moniquecarvalho.app.n8n.cloud/webhook-test/botflix', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ userPrompt: mood }),
+    });
+
+    const data = await response.json();
+    console.log(data);
     
+
+
 };
