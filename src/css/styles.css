@@ -76,7 +76,7 @@ body {
   position: relative;
 }
 
-.mood-input {
+.mood-textarea {
   width: 100%;
   padding: 16px 64px 16px 16px;
   background: rgba(255, 255, 255, 0.05);
@@ -88,7 +88,7 @@ body {
   transition: all 0.2s ease;
 }
 
-.mood-input:focus {
+.mood-textarea:focus {
   border-color: #e50914;
   outline: none;
   box-shadow: 0 0 0 3px rgba(229, 9, 20, 0.1);
